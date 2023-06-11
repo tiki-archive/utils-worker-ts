@@ -10,7 +10,6 @@
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
     "test": "jest --config jest.config.json",
     "prebuild": "npm test && npm run lint",
-    "prepare": "npm run build",
     "postbuild": "cp package.json dist",
     "preversion": "npm run lint",
     "postversion": "npm run format",
