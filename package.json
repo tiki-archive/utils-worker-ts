@@ -1,6 +1,6 @@
 {
   "name": "@mytiki/worker-utils-ts",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "fill me out",
   "main": "index.js",
   "type": "module",
@@ -9,9 +9,9 @@
     "format": "prettier --write \"src/**/*.{ts,js}\"",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
     "test": "jest --config jest.config.json",
+    "prebuild": "npm test && npm run lint",
     "prepare": "npm run build",
     "postbuild": "cp package.json dist",
-    "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "postversion": "npm run format",
     "clean": "tsc --build --clean"
