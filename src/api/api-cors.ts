@@ -27,9 +27,9 @@ export class ApiCors {
       .allowCredentials(this._credentials)
       .build();
 
-  guard(req: Request) {
+  guard(req: Request): Response | undefined {
     if (req.method.toLowerCase() === 'options') {
-      throw new Response(null, {
+      return new Response(null, {
         headers: this.headers(),
         status: 200,
       });
