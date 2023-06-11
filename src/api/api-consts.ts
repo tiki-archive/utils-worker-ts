@@ -4,3 +4,10 @@
  */
 
 export const API_LATEST = '/api/latest';
+
+export const skipNulls = (key: string, value: unknown) => {
+  if (value == null) {
+    return undefined;
+  }
+  return value;
+};
