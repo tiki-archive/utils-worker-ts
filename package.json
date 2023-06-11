@@ -1,8 +1,8 @@
 {
   "name": "@mytiki/worker-utils-ts",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "fill me out",
-  "main": "dist/index.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
@@ -10,6 +10,7 @@
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
     "test": "jest --config jest.config.json",
     "prepare": "npm run build",
+    "postbuild": "cp package.json dist",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "postversion": "npm run format",
@@ -55,9 +56,6 @@
     "jest-junit": "^16.0.0",
     "ts-jest": "^29.0.5"
   },
-  "files": [
-    "dist/**/*"
-  ],
-  "types": "dist/index.d.ts",
+  "types": "index.d.ts",
   "dependencies": {}
 }
