@@ -3,7 +3,6 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-import { Response } from '@cloudflare/workers-types';
 import { APPLICATION_JSON, HeaderBuilder } from './api-headers';
 import { ApiCors } from './api-cors';
 import { skipNulls } from './api-consts';

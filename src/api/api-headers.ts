@@ -3,8 +3,6 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-import { Headers } from '@cloudflare/workers-types';
-
 export const CONTENT_TYPE = 'Content-Type';
 export const ACCEPT = 'Accept';
 export const AUTHORIZATION = 'Authorization';
