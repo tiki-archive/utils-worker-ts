@@ -4,7 +4,6 @@
  */
 
 import { HeaderBuilder } from './api-headers';
-import { Request, Response } from '@cloudflare/workers-types';
 
 export class ApiCors {
   readonly _origin: string;

@@ -10,7 +10,6 @@
     ["jest-junit", {"outputDirectory": "reports", "outputName": "report.xml"}],
     "github-actions"
   ],
-  "setupFiles": ["<rootDir>/jest.setup.js"],
   "transformIgnorePatterns": [
     "/node_modules/(?!@cloudflare)"
   ]
