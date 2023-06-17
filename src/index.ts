@@ -3,9 +3,10 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-import * as ApiCors from './api/api-cors';
-import * as ApiError from './api/api-error';
-import * as ApiHeaders from './api/api-headers';
-import * as ApiConsts from './api/api-consts';
+import * as API from './api/api';
+import * as JWT from './jwt/jwt';
+import * as Base64 from './misc/base64';
+import * as Throw from './misc/throw';
+import * as JSON from './misc/json';
 
-export { ApiCors, ApiError, ApiHeaders, ApiConsts };
+export { API, JWT, Base64, Throw, JSON };

@@ -10,7 +10,8 @@
     ["jest-junit", {"outputDirectory": "reports", "outputName": "report.xml"}],
     "github-actions"
   ],
+  "testPathIgnorePatterns": ["/__fixtures__/"],
   "transformIgnorePatterns": [
-    "/node_modules/(?!@cloudflare)"
+    "/node_modules/(?!@cloudflare|itty-router)"
   ]
 }

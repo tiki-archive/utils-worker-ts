@@ -3,16 +3,15 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-export const CONTENT_TYPE = 'Content-Type';
-export const ACCEPT = 'Accept';
-export const AUTHORIZATION = 'Authorization';
-export const ALLOW_ORIGIN = 'Access-Control-Allow-Origin';
-export const ALLOW_METHODS = 'Access-Control-Allow-Methods';
-export const ALLOW_CREDENTIALS = 'Access-Control-Allow-Credentials';
-export const ALLOW_HEADERS = 'Access-Control-Allow-Headers';
-
-export const APPLICATION_JSON = 'application/json';
-export const APPLICATION_FORM_URL = 'application/x-www-form-urlencoded';
+import {
+  ACCEPT,
+  ALLOW_CREDENTIALS,
+  ALLOW_HEADERS,
+  ALLOW_METHODS,
+  ALLOW_ORIGIN,
+  AUTHORIZATION,
+  CONTENT_TYPE,
+} from './consts';
 
 export class HeaderBuilder {
   private _headers: Headers;
