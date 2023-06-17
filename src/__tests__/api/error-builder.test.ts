@@ -3,11 +3,11 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-import { ApiError } from '../api/api-error';
+import { ErrorBuilder } from '../../api/error-builder';
 
-describe('ApiError', function () {
+describe('ErrorBuilder', function () {
   test('No nulls', async () => {
-    const err: ApiError = new ApiError().message('test');
+    const err: ErrorBuilder = new ErrorBuilder().message('test');
     expect(err.json() === '{"message":"test"}');
   });
 });

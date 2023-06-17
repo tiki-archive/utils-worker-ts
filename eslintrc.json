@@ -4,7 +4,7 @@
         "es2021": true,
         "jest/globals": true
     },
-    "extends": ["standard", "prettier", "eslint:recommended", "plugin:@typescript-eslint/recommended"],
+    "extends": ["standard", "eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
     "plugins": ["prettier", "@typescript-eslint"],
     "overrides": [
         {
