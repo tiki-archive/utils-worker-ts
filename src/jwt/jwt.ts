@@ -41,7 +41,7 @@ export async function decode(
 
 function guard(claims: Map<string, unknown>, config: Config): void {
   if (config.claims !== undefined) {
-    config.claims.forEach((claim, i) => {
+    config.claims.forEach((claim) => {
       if (claims.get(claim) == null) {
         throw new ErrorBuilder()
           .message('JWT verification failed')
