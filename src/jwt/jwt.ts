@@ -79,4 +79,16 @@ function guard(claims: Map<string, unknown>, config: Config): void {
         .properties(new Map().set('exp', exp.toISOString()))
         .error(403);
   }
+
+  if (claims.get('nbf') != null) {
+    const nbf = new Date(
+      (claims.get('nbf') as number) * 1000 - (config.clockSkew ?? 0) * 1000
+    );
+    if (nbf > new Date())
+      throw new ErrorBuilder()
+        .message('JWT verification failed')
+        .detail('Not allowed yet.')
+        .properties(new Map().set('nbf', nbf.toISOString()))
+        .error(403);
+  }
 }
